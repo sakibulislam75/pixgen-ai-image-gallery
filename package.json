@@ -1,0 +1,38 @@
+{
+   "name": "nextjs-clean-setup",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint",
+      "prepare": "husky"
+   },
+   "dependencies": {
+      "@heroui/react": "^3.2.1",
+      "@heroui/styles": "^3.2.1",
+      "next": "16.2.4",
+      "react": "19.2.4",
+      "react-dom": "19.2.4"
+   },
+   "devDependencies": {
+      "@commitlint/cli": "^20.5.3",
+      "@commitlint/config-conventional": "^20.5.3",
+      "@tailwindcss/postcss": "^4",
+      "babel-plugin-react-compiler": "1.0.0",
+      "daisyui": "^5.5.19",
+      "eslint": "^9",
+      "eslint-config-next": "16.2.4",
+      "husky": "^9.1.7",
+      "lint-staged": "^16.4.0",
+      "prettier": "^3.8.3",
+      "tailwindcss": "^4"
+   },
+   "lint-staged": {
+      "*.{js,jsx,ts,tsx,json,css,md}": [
+         "prettier --write",
+         "prettier --check"
+      ]
+   }
+}
