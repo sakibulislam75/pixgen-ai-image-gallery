@@ -1,10 +1,6 @@
-import { cache } from 'react';
-
 export const topGenerationData = async () => {
    try {
-      const res = await fetch('https://pixgen-ai-image-gallery-alpha.vercel.app/data.json', {
-         cache: 'force-cache',
-      });
+      const res = await fetch('https://pixgen-ai-image-gallery-alpha.vercel.app/data.json');
       if (!res.ok) {
          throw new Error(`Request failed with status ${res.status}`);
       }
