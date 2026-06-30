@@ -29,7 +29,7 @@ const Navbar = () => {
                   <Navlink href="/main/all-photos">All Photos</Navlink>
                </li>
                <li>
-                  <Navlink href="/pricing">Pricing</Navlink>
+                  <Navlink href="/main/pricing">Pricing</Navlink>
                </li>
                <li>
                   <Navlink href="/profile">Profile</Navlink>
