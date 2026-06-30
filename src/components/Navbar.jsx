@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Navlink from './Navlink';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -22,16 +23,16 @@ const Navbar = () => {
             {/* Navigation */}
             <ul className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 text-sm">
                <li>
-                  <Link href="/">Home</Link>
+                  <Navlink href="/">Home</Navlink>
                </li>
                <li>
-                  <Link href="/all-photos">All Photos</Link>
+                  <Navlink href="/all-photos">All Photos</Navlink>
                </li>
                <li>
-                  <Link href="/pricing">Pricing</Link>
+                  <Navlink href="/pricing">Pricing</Navlink>
                </li>
                <li>
-                  <Link href="/profile">Profile</Link>
+                  <Navlink href="/profile">Profile</Navlink>
                </li>
             </ul>
 
