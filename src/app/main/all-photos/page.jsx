@@ -4,6 +4,9 @@ import { topGenerationData } from '@/lib/data';
 
 import React from 'react';
 
+export const metadata = {
+   title: 'pixen-ai-image-gallery || All-Photos',
+};
 const AllPhotos = async ({ searchParams }) => {
    const { category } = await searchParams;
 

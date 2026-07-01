@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-   title: 'Dragon News || Pricing',
+   title: 'pixen-ai-image-gallery || Pricing',
 };
 
 const PricingPage = () => {
@@ -22,7 +22,7 @@ const PricingPage = () => {
 
                <p className="mt-2 text-base text-base-content/60">
                   Stay tuned! We'll be launching our subscription plans with premium features,
-                  exclusive benefits, and more very soon.
+                  exclusive benefits and more very soon.
                </p>
 
                <div className="card-actions justify-center mt-8">
