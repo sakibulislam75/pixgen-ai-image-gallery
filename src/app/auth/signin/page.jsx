@@ -1,5 +1,6 @@
 'use client';
 
+import { authClient } from '@/lib/auth-client';
 import { Check } from '@gravity-ui/icons';
 import {
    Button,
@@ -16,6 +17,20 @@ import { GrGoogle } from 'react-icons/gr';
 export default function SignInPage() {
    const onSubmit = async (e) => {
       e.preventDefault();
+      const formData = new FormData(e.currentTarget);
+      const userData = Object.fromEntries(formData.entries());
+
+      const { data, error } = await authClient.signIn.email({
+         email: userData.email, // required
+         password: userData.password, // required
+         rememberMe: true,
+         callbackURL: '/',
+      });
+   };
+   const handleGoogleSignIn = async () => {
+      const data = await authClient.signIn.social({
+         provider: 'google',
+      });
    };
 
    return (
@@ -81,7 +96,7 @@ export default function SignInPage() {
 
             <p className="text-center">Or</p>
 
-            <Button variant="outline" className={'w-full'}>
+            <Button variant="outline" className={'w-full'} onClick={handleGoogleSignIn}>
                <GrGoogle /> Sign In With Google
             </Button>
          </Card>
